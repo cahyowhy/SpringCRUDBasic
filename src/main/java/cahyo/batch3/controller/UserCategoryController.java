@@ -54,4 +54,10 @@ public class UserCategoryController {
         userCategoryRepository.delete(Long.valueOf(id));
         return "delete success";
     }
+
+    @GetMapping(path = "/like")
+    public @ResponseBody
+    List<UserCategory> findByPrefix(@RequestParam("name") String name) {
+        return userCategoryRepository.findByPrefix(name);
+    }
 }

@@ -42,6 +42,12 @@ public class UserCategory {
         this.users = users;
     }
 
+    public UserCategory(Long id) {
+        this.id = id;
+    }
+
+    public UserCategory() {}
+
     @Override
     public String toString() {
         return "UserCategory{" +

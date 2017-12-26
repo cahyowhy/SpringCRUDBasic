@@ -64,4 +64,10 @@ public class UserController {
     List<User> findByPrefix(@RequestParam("name") String name) {
         return userRepository.findByPrefix(name);
     }
+
+    @GetMapping(path = "/email")
+    public @ResponseBody
+    List<User> findByEmail(@RequestParam("email") String email) {
+        return userRepository.findByEmail(email);
+    }
 }
